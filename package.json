@@ -1,0 +1,19 @@
+{
+  "name": "express-obj-endpoints-exposure",
+  "version": "1.0.0",
+  "description": "Exposing express.js endpoints(including nested) & detect middleware-names.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://DazChong@github.com/DazChong/express-obj-endpoints-exposure.git"
+  },
+  "author": "dazchong83@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DazChong/express-obj-endpoints-exposure/issues"
+  },
+  "homepage": "https://github.com/DazChong/express-obj-endpoints-exposure#readme"
+}
