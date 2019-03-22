@@ -13,7 +13,7 @@ Exposing express.js endpoints(including nested) & detect middleware-names.
 Paste the code below right BEFORE express.js `listen()` function:
 
 ```
-const { printEndpoints, apiTest } = require('list-endpoints')
+const { printEndpoints, apiTest } = require('express-obj-endpoints-exposure')
 app.get('/print-endpoints', (req, res) => res.send(printEndpoints(app)))
 app.get('/api-test', (req, res) => res.json(apiTest(app)))
 ```
@@ -34,7 +34,7 @@ app.use('/birds', birds)
 
 
 
-const { printEndpoints, apiTest } = require('list-endpoints')
+const { printEndpoints, apiTest } = require('express-obj-endpoints-exposure')
 app.get('/print-endpoints', (req, res) => res.send(printEndpoints(app)))
 app.get('/api-test', (req, res) => res.json(apiTest(app)))
 
