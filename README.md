@@ -2,7 +2,7 @@
 
 Exposing express.js endpoints(including nested) & detect middleware-names.
 
-### 🌈 Zero dependencies 🌈
+### 🌈 ZERO dependencies 🌈
 
 ## Installation
 
@@ -42,3 +42,38 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 ```
 
+## Sample output (not from Example above)
+
+`printEndpoints()`
+
+```
+### APP ###
+ GET | /home | 
+ GET | /some-path/products | PROTECT
+ GET | /some-path/users | PROTECT
+POST | /some-path/login
+
+### OTHERS ###
+ GET | /api-docs.json | 
+ GET | /sys/info | 
+ GET | /print-endpoints | 
+ GET | /api-test | 
+```
+
+`api-test()`
+```
+{
+  "api": [
+    {"method": "GET", "path": "\/home", "middlewares": []},
+    {"method": "GET", "path": "\/some-path\/products", "middlewares": ["protect"]},
+    {"method": "GET", "path": "\/some-path\/users", "middlewares": ["protect"]},
+    {"method": "POST", "path": "\/some-path\/login", "middlewares": []}
+  ],
+  "platform": [
+    {"method": "GET", "path": "\/api-docs.json", "middlewares": []},
+    {"method": "GET", "path": "\/sys\/info", "middlewares": []},
+    {"method": "GET", "path": "\/print-endpoints", "middlewares": []},
+    {"method": "GET", "path": "\/api-test", "middlewares": []}
+  ]
+}
+```
