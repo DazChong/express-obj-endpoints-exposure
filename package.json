@@ -1,6 +1,6 @@
 {
   "name": "express-obj-endpoints-exposure",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Exposing express.js endpoints(including nested) & detect middleware-names.",
   "main": "index.js",
   "scripts": {

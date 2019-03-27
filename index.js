@@ -28,9 +28,14 @@ const getEndpoints = function(app) {
       // START: appDynamics support
       } else if(r.handle.__appdynamicsProxyInfo__) { 
         const adr = r.handle.__appdynamicsProxyInfo__
+        const path = String(adr.obj.regexp).split('\\')[1]
         if(adr.orig.stack) {
-          const path = String(adr.obj.regexp).split('\\')[1]
           output.push({path: path, nested: getStack(adr.orig.stack)})
+        } else if(r.handle.__appdOriginal) { // AppDynamics v4.5.13
+          const adr2 = r.handle.__appdOriginal
+          if(adr2.stack) {
+            output.push({path: path, nested: getStack(adr2.stack)})
+          }
         }
       }
       // END: appDynamics support
